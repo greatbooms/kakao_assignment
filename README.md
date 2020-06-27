@@ -22,7 +22,7 @@
 - 에러처리
     - 상태코드로 정상과 에러를 구분합니다. 에러구분은 에러코드에 코드와 메세지를 정의하였습니다.
     - 비즈니스에러는 상태코드가 모두 400(BAD_REQUEST)으로 내려가며, 이외에 에러코드는 500(INTERNAL_SERVER_ERROR)으로 내려갑니다.
-    - 비즈니스에러는 RuntimeException을 확장한 CommonException을 생성해 에러코드에서 정의된 코드와 메세지가 제이슨 형태로 응답 되도록 했.
+    - 비즈니스에러는 RuntimeException을 확장한 CommonException을 생성해 에러코드에서 정의된 코드와 메세지가 제이슨 형태로 응답 되도록 했습니다.
 
 ## ERD
 ![kakao_assignment_erd](https://user-images.githubusercontent.com/5744408/85914267-d48ec700-b876-11ea-840f-76441bc1c0f7.png)
