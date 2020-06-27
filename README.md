@@ -39,7 +39,7 @@ mvn spring-boot:run
 - 기본정보 입력
     - 요청
     ~~~
-    curl -X GET http://127.0.0.1:50506/api/v1/roomUserInput -H "X-USER-ID:1" -H "X-ROOM-ID:testRoom0001"
+    curl -X POST http://127.0.0.1:50506/api/v1/roomUserInput -H "X-USER-ID:1" -H "X-ROOM-ID:testRoom0001"
     ~~~
     - 응답
     ~~~

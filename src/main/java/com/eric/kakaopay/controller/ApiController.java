@@ -23,7 +23,7 @@ public class ApiController {
     private final ReceiveService receiveService;
     private final InquiryService inquiryService;
 
-    @RequestMapping(value = "/roomUserInput", method = RequestMethod.GET)
+    @RequestMapping(value = "/roomUserInput", method = RequestMethod.POST)
     public ResponseEntity<?> roomUserInput(@RequestHeader(value = "X-ROOM-ID") String roomId, @RequestHeader(value = "X-USER-ID") Integer userId) {
         return ResponseEntity.status(HttpStatus.OK).body(inputService.insertData(roomId, userId));
     }
