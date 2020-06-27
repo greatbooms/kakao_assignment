@@ -45,7 +45,7 @@ public class SpreadServiceImpl implements SpreadService {
         }
         String token;
         do {
-            token = RandomStringUtils.randomAlphabetic(3);
+            token = RandomStringUtils.randomAlphanumeric(3);
         } while (spreadInfoRepository.existsByToken(token)); //랜덤생성한 토큰이 이미 데이터베이스에 저장되어있다면 다시 생성
         sInfo = SpreadInfo.builder()
                 .roomUserInfoKey(ruInfo)
