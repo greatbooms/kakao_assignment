@@ -2,6 +2,7 @@ package com.eric.kakaopay.serviceImpl;
 
 import com.eric.kakaopay.common.ErrorCode;
 import com.eric.kakaopay.dto.SpreadDto;
+import com.eric.kakaopay.dto.SpreadListDto;
 import com.eric.kakaopay.entity.RoomUserInfo;
 import com.eric.kakaopay.entity.SpreadInfo;
 import com.eric.kakaopay.entity.SpreadReceiveInfo;
@@ -16,6 +17,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Slf4j
@@ -83,5 +85,10 @@ public class SpreadServiceImpl implements SpreadService {
                 .totalUserCount(sInfo.getTotalUserCount())
                 .spreadTime(sInfo.getSpreadTime())
                 .build();
+    }
+
+    @Override
+    public List<SpreadListDto> getSpreadInfoList(String roomId) {
+        return spreadInfoRepository.findSpreadInfoUsingRoomId(roomId);
     }
 }

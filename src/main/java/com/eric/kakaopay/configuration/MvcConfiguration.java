@@ -10,6 +10,6 @@ public class MvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new RequiredValueCheckInterceptor())
-                .excludePathPatterns("/resources/**");
+                .excludePathPatterns("/resources/**","/api/v2/**","/index.html","/reset.css","/favicon.ico","/css/*","/img/*","/js/*");
     }
 }

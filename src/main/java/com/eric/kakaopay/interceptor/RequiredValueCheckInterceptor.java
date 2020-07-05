@@ -17,6 +17,7 @@ public class RequiredValueCheckInterceptor extends HandlerInterceptorAdapter {
         String userId = request.getHeader("X-USER-ID");
         log.debug("roomId = {}", roomId);
         log.debug("userId = {}", userId);
+        log.debug(request.getRequestURI());
 
         if(StringUtils.isEmpty(roomId) || StringUtils.isEmpty(userId)){
             throw new CommonException(ErrorCode.NO_HEADER_INFO);
